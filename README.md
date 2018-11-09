@@ -1,4 +1,4 @@
-## React Bubbles with help of d3.js
+## React Bubble with help of d3.js
 
 Still in development phase.
 ![react-d3-bubbles](sample_image.png)
@@ -6,8 +6,8 @@ Still in development phase.
 To try out,
 
 ```
-yarn add react-d3-bubbles # for yarn
-npm i --save-dev react-d3-bubbles # for npm
+yarn add react-d3-bubble # for yarn
+npm i --save-dev react-d3-bubble # for npm
 ```
 
 Currently supported props are:
@@ -174,7 +174,7 @@ export default Dashboard;
 
 ## Development
 
-# To get started, clone [this](https://github.com/absk1317/react-d3-bubbles-test) repo and run the following commands:
+# To get started, clone [this](https://github.com/absk1317/react-d3-bubble-test) repo and run the following commands:
 ```
 # in this repo:
 
@@ -184,7 +184,7 @@ npm link # npm link will be used to dev-test our component in our testing-projec
 
 # in the test repo:
 
-git clone git@github.com:absk1317/react-d3-bubbles-test.git # if not done already
+git clone git@github.com:absk1317/react-d3-bubble-test.git # if not done already
 
 npm install
 npm link react-fancy-component
@@ -192,5 +192,5 @@ npm run start
 
 
 # Now you can see the changes that you do in at http://localhost:3000
-# Remember to do a `npm run build` everytime you change anything in the react bubbles repo
+# Remember to do a `npm run build` everytime you change anything in the react bubble repo
 ```
