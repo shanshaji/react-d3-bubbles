@@ -22,10 +22,7 @@
     "circle",
     "tooltip"
   ],
-  "author": {
-    "name": "shan shaji",
-    "email": "shanshaji@gmail.com"
-  },
+  "author": "shan shaji <shanshaji@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shanshaji/react-d3-bubbles/pulls"
