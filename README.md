@@ -107,7 +107,8 @@ data: [
   width: 400,
   height: 250,
   center: { x: 200, y: 125 },
-  forceStrength: 0.03
+  forceStrength: 0.03,
+  onClick: ()=>func()
 ```
 
 And use in your component as
