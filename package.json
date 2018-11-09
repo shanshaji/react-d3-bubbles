@@ -1,5 +1,5 @@
 {
-  "name": "react-d3-bubbles",
+  "name": "react-d3-bubble",
   "version": "1.2.1",
   "description": "A react wrapper over d3.js for bubble chart. ",
   "main": "build/index.js",
@@ -23,14 +23,14 @@
     "tooltip"
   ],
   "author": {
-    "name": "abhishek verma",
-    "email": "absk1317@gmail.com"
+    "name": "shan shaji",
+    "email": "shanshaji@gmail.com"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/absk1317/react-d3-bubbles/issues"
+    "url": "https://github.com/shanshaji/react-d3-bubbles/pulls"
   },
-  "homepage": "https://github.com/absk1317/react-d3-bubbles#readme",
+  "homepage": "https://github.com/shanshaji/react-d3-bubbles#readme",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "d3": "^5.5.0",

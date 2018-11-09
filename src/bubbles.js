@@ -85,7 +85,8 @@ export default class Bubbles extends React.Component {
       .attr('cy', d => d.y)
       .attr('fill', d => d.color)
       .on('mouseover', showDetail)
-      .on('mouseout', hideDetail);
+      .on('mouseout', hideDetail)
+      .on('click', onClick);
     const labels = bubbles
       .enter()
       .append('text')
@@ -105,7 +106,8 @@ export default class Bubbles extends React.Component {
         }
       })
       .on('mouseover', (d, i) => showDetailLabelHover(d, i, this.state.g))
-      .on('mouseout', hideDetailLabelHover);
+      .on('mouseout', hideDetailLabelHover)
+      .on('click', (d, i) => {d3.event.stopPropagation(); props.onClick(d);});
     labels.transition().duration(0);
     bubblesE
       .transition()
