@@ -107,7 +107,7 @@ export default class Bubbles extends React.Component {
       })
       .on('mouseover', (d, i) => showDetailLabelHover(d, i, this.state.g))
       .on('mouseout', hideDetailLabelHover)
-      .on('click', (d, i) => {d3.event.stopPropagation(); props.onClick(d);});
+      .on('click', (d, i) => {d3.event.stopPropagation(); this.props.onClick(d); console.log("clicked");});
     labels.transition().duration(0);
     bubblesE
       .transition()
