@@ -6,6 +6,7 @@ export default class Bubbles extends React.Component {
   constructor(props) {
     super(props);
     const { forceStrength, center } = props;
+    this.renderBubbles = this.renderBubbles.bind(this);
     this.simulation = d3
       .forceSimulation()
       .velocityDecay(0.2)
@@ -41,7 +42,7 @@ export default class Bubbles extends React.Component {
       {
         g: d3.select(ref)
       },
-      () => this.renderBubbles(this.props.data)
+      () => this.renderBubbles()
     );
   };
 
@@ -65,8 +66,10 @@ export default class Bubbles extends React.Component {
     // return -this.props.forceStrength * d.radius ** 2.06;
   };
 
-  renderBubbles = data => {
-    const bubbles = this.state.g.selectAll(".bubble").data(data, d => d.id);
+  renderBubbles() {
+    const bubbles = this.state.g
+      .selectAll(".bubble")
+      .data(this.props.data, d => d.id);
 
     bubbles.exit().remove();
 
@@ -84,9 +87,8 @@ export default class Bubbles extends React.Component {
       .on("mouseout", hideDetail)
       .on(
         "click",
-        function(d, i) {
-          d3.event.stopPropagation();
-          this.props.onClick(d);
+        function(d) {
+          this.props.onClickCallBack(d);
         }.bind(this)
       );
     const labels = bubbles
@@ -120,11 +122,11 @@ export default class Bubbles extends React.Component {
       .attr("r", d => d.radius)
       .on("end", () => {
         this.simulation
-          .nodes(data)
+          .nodes(this.props.data)
           .alpha(1)
           .restart();
       });
-  };
+  }
 
   render() {
     return <g ref={this.onRef} className="bubbles" />;
